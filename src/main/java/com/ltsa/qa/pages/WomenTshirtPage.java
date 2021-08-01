@@ -13,7 +13,7 @@ public class WomenTshirtPage extends Base{
 	@FindBy(xpath="//a[@title ='Women']")
 	WebElement womenNavigation;
 
-	@FindBy(xpath="//a[@title ='Tops' and @class= 'sf-with-ul']")
+	@FindBy(xpath="//a[@title ='Tops']/img")
 	WebElement topsNavigation;
 
 	@FindBy(xpath="//span[@class= 'category-name']")
@@ -23,15 +23,15 @@ public class WomenTshirtPage extends Base{
 		PageFactory.initElements(driver, this);	
 	}
 
-	public void womenNavigationToTops() {
+	public void womenNavigationToTops() throws InterruptedException {
 		womenNavigation.click();
 		js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,-350)", "");
-		//js.executeScript("arguments[0].scrollIntoView();", topsNavigation);
+		js.executeScript("arguments[0].scrollIntoView();", topsNavigation);
 		topsNavigation.click();	
 	}
 	
 	public String topsLabelCheck() {
+		System.out.println(topsPageLabel.getText());
 		return topsPageLabel.getText();
 	}
 }

@@ -21,9 +21,9 @@ public class WomenTshirtPageTest extends Base{
 	}
 	
 	@Test
-	public void womenNavigationToTopsTest() {
+	public void womenNavigationToTopsTest() throws Exception {
 		womenObj.womenNavigationToTops();
-		Assert.assertEquals(womenObj.topsLabelCheck(), "TOPS");
+		Assert.assertEquals(womenObj.topsLabelCheck(), "Tops");
 	}
 	
 	@AfterMethod
