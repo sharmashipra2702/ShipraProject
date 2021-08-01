@@ -4,6 +4,7 @@
   <test name="Login Test Run">
   <classes>
 			<class name="com.ltsa.qa.testcases.LoginPageTest" />
+			<class name="com.ltsa.qa.testcases.WomenTshirtPageTest" />	
 		</classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
